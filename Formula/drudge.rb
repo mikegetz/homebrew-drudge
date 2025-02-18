@@ -1,32 +1,32 @@
 class Drudge < Formula
   desc "A CLI that prints the drudge page headlines to stdout"
   homepage "https://github.com/mikegetz/drudge"
-  version "1.2.5"
+  version "1.3.0"
   license "MIT"  # Adjust according to your license
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mikegetz/drudge/releases/download/v1.2.5/drudge-v1.2.5-windows-amd64"
-      sha256 "604d7d9dd5731b4e5452407975a001ad4c0510b26a6c00fa5ff8061ca1598f2b"
+      url "https://github.com/mikegetz/drudge/releases/download/v1.3.0/drudge-v1.3.0-darwin-amd64"
+      sha256 "6b8c93a6f69461913fc45466f93742b8c1e0f20cd3eb1ae6bbe68f6047f5a95b"
     elsif Hardware::CPU.arm?
-      url "https://github.com/mikegetz/drudge/releases/download/v1.2.5/drudge-v1.2.5-darwin-arm64"
-    sha256 "abcfae231a950c32b91033a3523c627c9c69b1a49cf14aff6dfd5290cbc752d2"
+      url "https://github.com/mikegetz/drudge/releases/download/v1.3.0/drudge-v1.3.0-darwin-arm64"
+    sha256 "e689cf8df03d13561494a5aead14a91dcf0b17d651c5f17e03f8d31776ba9f24"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/mikegetz/drudge/releases/download/v1.2.5/drudge-v1.2.5-darwin-amd64"
-      sha256 "a4b14f4c96a7ecf8f3b32df61caefadbd44df107a1399ba61d0cbbb9dd969932"
+      url "https://github.com/mikegetz/drudge/releases/download/v1.3.0/drudge-v1.3.0-linux-amd64"
+      sha256 "60aa79eb7760c755be4ab2bff3866d4a6464901273c72189869c03377a148491"
     elsif Hardware::CPU.arm?
-      url "https://github.com/mikegetz/drudge/releases/download/v1.2.5/drudge-v1.2.5-linux-arm64"
-      sha256 "b84bd062036be7b8a6d470ee28de1ba007d5b8a32e64b783cd3e1ffa80b351d8"
+      url "https://github.com/mikegetz/drudge/releases/download/v1.3.0/drudge-v1.3.0-linux-arm64"
+      sha256 "850de4afe9e03795c4d244311eccfe50bc8ebed9e8794a9a43a8b93552c06144"
     end
   end
 
   def install
-    chmod "+x", "drudge-v1.2.5-darwin-arm64"
-  bin.install "drudge-v1.2.5-darwin-arm64" => "drudge"
+    chmod "+x", "drudge-v1.3.0-darwin-arm64"
+  bin.install "drudge-v1.3.0-darwin-arm64" => "drudge"
   end
 
   test do
